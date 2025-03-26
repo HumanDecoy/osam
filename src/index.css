@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Itim", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.2rem;
+  color: #275c9b;
+}
+
+body {
+  background-image: url("/bg-icons.png");
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.75);
+  background-position: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0.3;
+  }
+}
+
+.heart-beat {
+  animation: heartbeat 1s ease-in-out forwards;
+}
