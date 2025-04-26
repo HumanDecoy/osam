@@ -1,9 +1,9 @@
 import { SideSection } from "./SideSection";
-import fina from "../assets/oss/fina.png";
+import amos from "../assets/osam/amos2010.png";
 interface TimelineEventProps {
   time: string;
   event: string;
-  desc: string;
+  desc?: string;
   locationName?: string;
   address: string;
   addressLink?: string;
@@ -18,7 +18,7 @@ const TimelineEvent = ({
   addressLink,
 }: TimelineEventProps) => {
   return (
-    <div className="space-y-2 border p-4 rounded-lg">
+    <div className="space-y-2 border p-4 rounded-lg bg-white">
       <div className="text-2xl text-gray-600">{time}</div>
       <div className="text-2xl font-medium">{event}</div>
       {desc && <div className="font-medium text-lg">{desc}</div>}
@@ -47,26 +47,31 @@ export const ScheduleSection = () => {
     <SideSection
       id="schema"
       title="Schema"
-      imageSrc={fina}
+      imageSrc={amos}
       imageAlt="Wedding venue decorations"
       imageOnRight
     >
       <div className="space-y-8">
-        <p>Mer info kommer när det närmar sig men här är grundidén</p>
         <TimelineEvent
-          time="15:00"
+          time="16:00"
           event="Vigsel"
-          desc="Vigsel i Axbergs kyrka"
-          address="Axbergs kyrka, Örebro"
-          addressLink="https://maps.app.goo.gl/pwci77KgyhKdQYfF8"
+          desc="Vigsel i Sofia kyrka"
+          address="Klefbecks backe 1, 116 29 Stockholm"
+          addressLink="https://maps.app.goo.gl/kdub4byQ5ep8TMfk6"
         />
         <TimelineEvent
-          time="17:00 - 01:00"
-          event="Middag & fest"
-          locationName="Orangeriet på eztrad"
-          address={`Sommarrovägen 24, Örebro`}
-          addressLink="https://maps.app.goo.gl/rK47DsmLcr9nXYa26"
-          desc="Lite mingel och fördrinkar innan trerätters middag och sedan fest. Dryck ingår till maten men övrig alkohol får köpas själv i baren."
+          time="~ 17:10"
+          event="Transport till Ekensdal"
+          desc="Vi tar en kort promenad ner till barnängsbryggan och transporterar oss med båt till Ekensdal. "
+          address="Barnängsbryggan"
+          addressLink="https://maps.app.goo.gl/4W7UFbbk34aUQFoZA"
+        />
+        <TimelineEvent
+          time="~17:45 - 02:00"
+          event="Middag, mingel & fest"
+          locationName="Ekensdal"
+          address={`Skurusundsvägen 151, 131 46 Nacka`}
+          addressLink="https://maps.app.goo.gl/K14hvR88pGjzjNKq5"
         />
       </div>
     </SideSection>

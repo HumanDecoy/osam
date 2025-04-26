@@ -1,11 +1,10 @@
-import bgBig from "./assets/bg-big.png";
+import bgSmall from "./assets/osam/OsAmMobil.png";
+import bgBig from "./assets/osam/osamBGLarge.png";
 import { ScheduleSection } from "./components/ScheduleSection";
-import { AccomodationSection } from "./components/AccomodationSection";
 import { FAQSection } from "./components/FAQSection";
 import { StartSection } from "./components/StartSection";
 import { OSASection } from "./components/OSASection";
 import { PasswordWrapper } from "./components/PasswordWrapper";
-import { OurStory } from "./components/OurStory";
 
 export const App = () => {
   return (
@@ -15,25 +14,20 @@ export const App = () => {
           <StartSection
             id="home"
             title="Vi gifter oss!"
-            imgSrc={bgBig}
-            imageAlt="Happy couple"
+            imgSrc={window.innerWidth <= 768 ? bgSmall : bgBig}
+            imageAlt="oscar och amanda"
           >
             <div className="prose max-w-none text-center text-lg md:w-1/2 mx-auto">
               <p className="text-gray-700">
-                Kul att vi ska gifta oss, ännu roligare att du ska komma med. Vi
-                är taggade på att ha med dig på vårt bröllop i Örebro.
-                <br />
-                <br />
-                OBS Hemsidan är inte helt klar än så håll utkik framåt så du
-                inte missar något.
+                Och vi vill att ni kommer med och firar!
               </p>
             </div>
           </StartSection>
 
           <div className="my-20 p-py-16 space-y-48">
-            <OurStory />
+            {/* <OurStory /> */}
             <ScheduleSection />
-            <AccomodationSection />
+            {/* <AccomodationSection /> */}
             <FAQSection />
             <OSASection />
           </div>

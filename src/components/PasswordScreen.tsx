@@ -1,27 +1,21 @@
-import { HeartIcon } from "@heroicons/react/16/solid";
-import { LockClosedIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 
 type PasswordScreenProps = {
   onCorrectPassword: (password: string) => void;
 };
 
-export const PASSWORDS = ["kulmedbröllop", "kulmedbrollop"];
+export const PASSWORDS = ["gren", "Gren", "GREN", "KARN", "karn", "Karn"];
 
 export const PasswordScreen: React.FC<PasswordScreenProps> = ({
   onCorrectPassword,
 }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (PASSWORDS.includes(password.toLowerCase())) {
-      setSuccess(true);
-      setTimeout(() => {
-        onCorrectPassword(password);
-      }, 1000);
+      onCorrectPassword(password);
     } else {
       setError(true);
     }
@@ -30,25 +24,9 @@ export const PasswordScreen: React.FC<PasswordScreenProps> = ({
   return (
     <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-          {!success ? (
-            <LockClosedIcon
-              className="h-6 w-6 text-blue-600"
-              aria-hidden="true"
-            />
-          ) : (
-            <HeartIcon
-              className="h-6 w-6 text-red-600 heart-beat"
-              aria-hidden="true"
-            />
-          )}
-        </div>
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-          Hej och välkommen!
+          Vad heter Amanda eller Oscar i efternamn?
         </h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
-          Skriv in lösenordet som står på din inbjudan.
-        </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
