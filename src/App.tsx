@@ -5,6 +5,8 @@ import { FAQSection } from "./components/FAQSection";
 import { StartSection } from "./components/StartSection";
 import { OSASection } from "./components/OSASection";
 import { PasswordWrapper } from "./components/PasswordWrapper";
+import { AccomodationSection } from "./components/AccomodationSection";
+import frha from "./assets/osam/freyjaharald.jpg";
 
 export const App = () => {
   return (
@@ -27,9 +29,25 @@ export const App = () => {
           <div className="my-20 p-py-16 space-y-48">
             {/* <OurStory /> */}
             <ScheduleSection />
-            {/* <AccomodationSection /> */}
+            <AccomodationSection />
             <FAQSection />
             <OSASection />
+            <div
+              style={{
+                padding: "0 16px",
+                marginTop: "60  px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <div className="w-full md:w-5/12 h-[50vh] md:h-full">
+                <img
+                  src={frha}
+                  alt={"freyja och harald"}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </main>
       </div>
