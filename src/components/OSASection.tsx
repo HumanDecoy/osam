@@ -4,7 +4,11 @@ export const OSASection = () => {
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSc-Zu1BltDVTSGUegSbRKEPDUQyAezEXRCy7rkrwkemIPM8yQ/viewform?embedded=true"
         width={"100%"}
-        height={1200}
+        height={
+          typeof window !== "undefined" && window.innerWidth <= 768
+            ? 1340
+            : 1200
+        }
       >
         Laddar...
       </iframe>

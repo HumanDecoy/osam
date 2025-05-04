@@ -1,5 +1,5 @@
 import { SideSection } from "./SideSection";
-import amos from "../assets/osam/amos2010.png";
+import amos from "../assets/osam/festosam.jpg";
 interface TimelineEventProps {
   time: string;
   event: string;
@@ -48,7 +48,7 @@ export const ScheduleSection = () => {
       id="schema"
       title="Schema"
       imageSrc={amos}
-      imageAlt="Wedding venue decorations"
+      imageAlt="Visby 2010"
       imageOnRight
     >
       <div className="space-y-8">

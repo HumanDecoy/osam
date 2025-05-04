@@ -31,20 +31,15 @@ export const SideSection = ({
       `}
       >
         {/* Image Container */}
-        <div className="w-full md:w-5/12 h-[50vh] md:h-full">
+        <div className="w-full md:w-5/12 h-[50vh] md:h-full flex flex-col">
           <img
             src={imageSrc}
             alt={imageAlt}
             className="w-full h-full object-cover rounded-lg"
           />
-          {additionalImages &&
-            additionalImages.map((imagedata) => (
-              <img
-                src={imagedata.imageSrc}
-                alt={imagedata.imageAlt}
-                className="w-full h-full object-cover rounded-lg hidden md:block"
-              />
-            ))}
+          <p className="text-left italic mt-2 text-sm text-gray-600">
+            {imageAlt}
+          </p>
         </div>
 
         {/* Content Container */}

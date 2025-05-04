@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { SideSection } from "./SideSection";
 
-import nacka from "../assets/osam/nacka2019.png";
-import nackaSm from "../assets/osam/nacka2019sm.png";
+import nacka from "../assets/osam/osamfr.jpg";
+import nackaSm from "../assets/osam/osamfr.jpg";
 interface FAQItemProps {
   question: string;
   answer: string;
@@ -61,7 +61,7 @@ export const FAQSection = () => {
       id="faq"
       title="Frågor och svar"
       imageSrc={window.innerWidth <= 768 ? nackaSm : nacka}
-      imageAlt="Decorative wedding image"
+      imageAlt="Nacka 2019"
       imageOnRight
     >
       <div className="space-y-2">

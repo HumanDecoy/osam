@@ -7,7 +7,7 @@ export const AccomodationSection = () => {
       id="tal"
       title="Jag vill hålla tal!"
       imageSrc={toast}
-      imageAlt="Erik och Nisse folker"
+      imageAlt="Erik och Nils Folker"
     >
       <div className="prose">
         <p>

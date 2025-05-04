@@ -21,7 +21,7 @@ export const App = () => {
           >
             <div className="prose max-w-none text-center text-lg md:w-1/2 mx-auto">
               <p className="text-gray-700">
-                Och vi vill att ni kommer med och firar!
+                Den 1 augusti 2025 vill vi att ni kommer med oss och firar!
               </p>
             </div>
           </StartSection>
@@ -32,20 +32,18 @@ export const App = () => {
             <AccomodationSection />
             <FAQSection />
             <OSASection />
-            <div
-              style={{
-                padding: "0 16px",
-                marginTop: "60  px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <div className="w-full md:w-5/12 h-[50vh] md:h-full">
-                <img
-                  src={frha}
-                  alt={"freyja och harald"}
-                  className="w-full h-full object-cover rounded-lg"
-                />
+            <div className="px-4 mt-16 flex flex-col items-center">
+              <div className="w-full md:w-5/12">
+                <div className="w-full h-[50vh] md:h-full">
+                  <img
+                    src={frha}
+                    alt="freyja och harald"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 mt-2 italic text-left">
+                  Freyja & Harald
+                </p>
               </div>
             </div>
           </div>
