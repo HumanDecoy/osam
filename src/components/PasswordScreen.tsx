@@ -4,7 +4,18 @@ type PasswordScreenProps = {
   onCorrectPassword: (password: string) => void;
 };
 
-export const PASSWORDS = ["gren", "Gren", "GREN", "KARN", "karn", "Karn"];
+export const PASSWORDS = [
+  "gren",
+  "Gren",
+  "GREN",
+  "KARN",
+  "karn",
+  "Karn",
+  "karngren",
+  "Karngren",
+  "grenkarn",
+  "Grenkarn",
+];
 
 export const PasswordScreen: React.FC<PasswordScreenProps> = ({
   onCorrectPassword,
