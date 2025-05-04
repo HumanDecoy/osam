@@ -1,7 +1,5 @@
 import { SideSection } from "./SideSection";
 import glada from "../assets/oss/glada.png";
-import unga from "../assets/oss/unga.png";
-import coola from "../assets/oss/coola.png";
 
 export const OurStory = () => {
   return (
