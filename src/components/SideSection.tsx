@@ -4,10 +4,6 @@ interface SideSectionProps {
   title: string;
   imageSrc: React.ImgHTMLAttributes<HTMLImageElement>["src"];
   imageAlt: string;
-  additionalImages?: {
-    imageSrc: React.ImgHTMLAttributes<HTMLImageElement>["src"];
-    imageAlt: string;
-  }[];
   children: React.ReactNode;
   imageOnRight?: boolean;
 }
@@ -17,7 +13,6 @@ export const SideSection = ({
   title,
   imageSrc,
   imageAlt,
-  additionalImages,
   children,
   imageOnRight = false,
 }: SideSectionProps) => {
