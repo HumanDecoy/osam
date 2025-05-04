@@ -10,16 +10,6 @@ export const OurStory = () => {
       title="Vår berättelse"
       imageSrc={glada}
       imageAlt="Vår berättelse"
-      additionalImages={[
-        {
-          imageSrc: unga,
-          imageAlt: "Vi som unga",
-        },
-        {
-          imageSrc: coola,
-          imageAlt: "Vi som coola",
-        },
-      ]}
       imageOnRight={false} // optional - defaults to false (image on left)
     >
       <div className="prose space-y-6">
